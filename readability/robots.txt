@@ -1,0 +1,15 @@
+# Public beta pages may be fetched so crawlers can read noindex and share metadata.
+# Page response headers control indexing. This file does not protect private data.
+User-agent: *
+Allow: /
+
+# Keep application data and owner actions out of normal crawling.
+Disallow: /api/
+
+# Social previews can fetch approved photos. The server rejects unpublished photos.
+Allow: /api/photos/
+
+# Sign-in and callback URLs are not content pages.
+Disallow: /signin-with-chatgpt
+Disallow: /signout-with-chatgpt
+Disallow: /callback
